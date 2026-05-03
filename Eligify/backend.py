@@ -1,14 +1,3 @@
-"""
-backend.py  –  ClearBank Loan Eligibility
-==========================================
-Responsibilities:
-  • Train / cache the logistic-regression model on synthetic data
-  • Expose a single `predict(...)` function consumed by the frontend
-  • Helper formatter fmt_inr()
-
-No Streamlit imports here – this module is UI-agnostic.
-"""
-
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
@@ -17,9 +6,6 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-# ──────────────────────────────────────────────────────────────
-#  Feature names (shared constant – import in frontend too)
-# ──────────────────────────────────────────────────────────────
 FEATURE_NAMES = [
     "Income (log)",
     "Loan amount (log)",
